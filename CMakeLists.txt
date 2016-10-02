@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.0)
 project(homework2)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -Weverything -lm -g -O0")
