@@ -30,15 +30,15 @@ Matrix* create_matrix_from_file(FILE* file) {
                 return NULL;
             }
 
-            double buffer = 0.0;
-            fscanf(file, "%lf", &buffer);
+            char buffer[128] = {0, };
+            fscanf(file, "%s", buffer);
             if (ferror(file)) {
                 printf("File read error\n");
                 free_matrix(matrix);
                 return NULL;
             }
 
-            set_elem(matrix, rowIndex, columnIndex, buffer);
+            set_elem(matrix, rowIndex, columnIndex, atof(buffer));
         }
 
     }
