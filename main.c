@@ -30,8 +30,8 @@ int main(int argc, char* argv[]) {
 double getEuclideanNorm(Matrix *matrix) {
     double squaresSum = 0;
 
-    for (int i = 0; i < matrix->rowsCount; ++i) {
-        for (int j = 0; j < matrix->columnsCount; ++j) {
+    for (unsigned int i = 0; i < matrix->rowsCount; ++i) {
+        for (unsigned int j = 0; j < matrix->columnsCount; ++j) {
             squaresSum += pow(matrix->map[i][j], 2);
         }
     }
