@@ -8,7 +8,7 @@ void printMatrix(Matrix *matrix);
 
 int main(int argc, char* argv[]) {
     if (argc != 2) {
-        printf("homework2 file1\n");
+        printf("homework2 [filename]\n");
         return 1;
     }
 
