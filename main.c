@@ -4,7 +4,6 @@
 #include "matrix.h"
 
 double getEuclideanNorm(Matrix *matrix);
-void printMatrix(Matrix *matrix);
 
 int main(int argc, char* argv[]) {
     if (argc != 2) {
@@ -38,14 +37,4 @@ double getEuclideanNorm(Matrix *matrix) {
     }
 
     return sqrt(squaresSum);
-}
-
-void printMatrix(Matrix *matrix) {
-    for (int i = 0; i < matrix->rowsCount; ++i) {
-        for (int j = 0; j < matrix->columnsCount; ++j) {
-            printf("%0.1lf ", matrix->map[i][j]);
-        }
-
-        printf("\n");
-    }
 }
