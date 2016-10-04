@@ -5,8 +5,8 @@
 #include <stdlib.h>
 
 typedef struct Matrix {
-    int rowsCount;
-    int columnsCount;
+    unsigned int rowsCount;
+    unsigned int columnsCount;
 
     double **map;
 } Matrix;
