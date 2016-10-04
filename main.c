@@ -13,18 +13,20 @@ int main(int argc, char* argv[]) {
 
     FILE *file = fopen(argv[1], "r");
     if (file == NULL) {
-        //ferror
         printf("File \"%s\" is not found\n", argv[1]);
         return 2;
     }
+
     Matrix *matrix = create_matrix_from_file(file);
     fclose(file);
 
-    printMatrix(matrix);
-    printf("%lf\n", getEuclideanNorm(matrix));
-    free_matrix(matrix);
-    
-	return 0;
+    if (matrix) {
+        printf("%lf\n", getEuclideanNorm(matrix));
+        free_matrix(matrix);
+        return 0;
+    } else {
+        return 3;
+    }
 }
 
 double getEuclideanNorm(Matrix *matrix) {
