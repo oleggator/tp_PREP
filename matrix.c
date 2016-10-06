@@ -31,7 +31,7 @@ Matrix* create_matrix_from_file(FILE* file) {
 
         for (unsigned int columnIndex = 0; columnIndex < columnsCount; ++columnIndex) {
             double buffer;
-            if (fscanf(file, "%lf", &buffer) != 1) {
+            if (fscanf(file, "%15lf", &buffer) != 1) {
                 if (ferror(file)) {
                     printf("File read error\n");
                 } else {
