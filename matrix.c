@@ -84,7 +84,7 @@ void free_matrix(Matrix* matrix) {
 }
 
 double get_elem(Matrix* matrix, int row, int col) {
-    if (row < 0 || row >= get_rows(matrix)){
+    if (row < 0 || row >= get_rows(matrix)) {
         printf("Wrong row index\n");
         return 0;
     } else if (col < 0 || col >= get_cols(matrix)) {
