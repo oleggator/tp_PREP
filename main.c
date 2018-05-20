@@ -34,7 +34,7 @@ double getEuclideanNorm(Matrix *matrix) {
 
     for (unsigned int i = 0; i < get_rows(matrix); ++i) {
         for (unsigned int j = 0; j < get_cols(matrix); ++j) {
-            squaresSum += pow(matrix->map[i][j], 2);
+            squaresSum += pow(get_elem(matrix, i, j), 2);
         }
     }
 
